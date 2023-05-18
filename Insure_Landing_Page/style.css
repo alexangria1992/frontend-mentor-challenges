@@ -39,3 +39,9 @@ h5 {
   height: 1px;
   margin: auto;
 }
+
+footer h3 {
+  color: #c7c7c7;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
