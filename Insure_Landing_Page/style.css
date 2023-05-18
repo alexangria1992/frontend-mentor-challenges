@@ -32,3 +32,10 @@ h5 {
   border: 1px solid green;
   background-color: hsl(256, 26%, 20%);
 }
+
+.underline {
+  background-color: #c7c7c7;
+  width: 150px;
+  height: 1px;
+  margin: auto;
+}
