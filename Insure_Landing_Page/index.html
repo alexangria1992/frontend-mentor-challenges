@@ -38,7 +38,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Insure landing page</title>
   </head>
   <body>
@@ -54,18 +54,35 @@
     </header>
 
     <!-- Showcase -->
-    <section class="showcase">
+    <section class="showcase border-2 border-red-400">
       <div>
-        <img src="./images/image-intro-mobile.jpg" alt="" />
+        <img src="./images/image-intro-mobile.jpg " alt="" class="w-full" />
       </div>
-      <div>
-        <h1>Humanizing your insurance.</h1>
-        <p>
+      <div class="showcase-inner py-20 px-5">
+        <img
+          src="./images/bg-pattern-intro-left-mobile.svg"
+          alt=""
+          class="absolute top-0 left-0"
+        />
+
+        <h1 class="text-white text-5xl text-center">
+          Humanizing your insurance.
+        </h1>
+        <p class="text-white text-center mt-5 mb-10">
           Get your life insurance coverage easier and faster. We blend our
           expertise and technology to help you find the plan that’s right for
           you. Ensure you and your loved ones are protected.
         </p>
-        <button>View plans</button>
+        <div class="text-center">
+          <button class="border-2 border-white px-6 py-2 uppercase text-white">
+            View plans
+          </button>
+        </div>
+        <img
+          src="./images/bg-pattern-intro-right-mobile.svg"
+          alt=""
+          class="absolute -bottom-40 right-0"
+        />
       </div>
     </section>
 
