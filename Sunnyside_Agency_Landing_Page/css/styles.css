@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+/* reset */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 10px; /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* project variables */
+:root {
+  /* fonts */
+  --first-font: "Barlow", sans-serif;
+  --second-font: "Fraunces", serif;
+  --size-font: 1.8rem;
+  --semi-font: 600;
+  --bold-font: 700;
+  --black-font: 900;
+
+  /* colors */
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark-desaturated-cyan: hsl(167, 40%, 24%); /* graphic design text */
+  --dark-blue: hsl(198, 62%, 26%); /* photography text */
+  --dark-moderate-cyan: hsl(168, 34%, 41%); /* footer */
+
+  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+
+  --header-blue: hsl(200, 100%, 62%);
+  --header-blue-hover: hsl(200, 100%, 70%);
+  --footer-green: hsl(167, 44%, 70%);
+}
+
+/* project settings */
+body {
+  font-family: var(--first-font);
+  font-size: var(--size-font);
+  font-weight: var(--semi-font);
+  background-color: var(--white);
+  color: var(--dark-grayish-blue);
+  margin: 0;
+}
+
+/*=== LAYOUT START ===*/
+
+.section {
+  width: 100vw;
+  height: auto;
+  border: 1px solid blue;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.2rem 2.4rem;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+/* HEADER START */
+.header {
+  height: 8.8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--header-blue);
+}
+
+/* HEADER > LOGO */
+
+.header .container .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-indent: -999rem;
+}
+
+.header .container .menu-button {
+  width: 4.8rem;
+  height: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 1rem 0;
+}
+
+.header .container .menu-button .bar1,
+.header .container .menu-button .bar2,
+.header .container .menu-button .bar3 {
+  width: 2.4rem;
+  background-color: var(--white);
+  height: 0.2rem;
+  display: flex;
+}
+
+/* Header Nav */
+.header .container .main-nav {
+  /* border: 1px solid blue; */
+  display: block;
+  width: calc(100% - 4.8rem);
+  height: auto;
+  position: absolute;
+  top: 10.8rem;
+  background-color: aliceblue;
+  padding: 2.4rem 0;
+  text-align: center;
+  transform: scale(0);
+  transform-origin: top right;
+  transition: transform 0.3s ease-in-out;
+  background-color: var(--white);
+}
+
+.header .container .main-nav.-active {
+  /* border: 1px solid blue; */
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header .container .main-nav .nav-edge {
+  position: absolute;
+  top: -2.4rem;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 2.4rem solid transparent;
+  border-bottom: 2.4rem solid transparent;
+  border-right: 2.4rem solid var(--white);
+}
+
+.header .container .main-nav .list {
+  /* border: 1px solid lightcoral; */
+  width: 100%;
+}
+
+.header .container .main-nav .list .item {
+  padding: 1.6rem 0;
+}
+
+.header .container .main-nav .list .item .link {
+  color: var(--dark-grayish-blue);
+  font-weight: var(--bold-font);
+}
+
+.header .container .main-nav .list .item .link.-cta-button {
+  width: 14rem;
+  height: 5.6rem;
+  font-family: var(--second-font);
+  font-weight: var(--black-font);
+  color: var(--very-dark-desaturated-blue);
+  text-transform: uppercase;
+  background-color: var(--yellow);
+  border-radius: 2.8rem;
+}
