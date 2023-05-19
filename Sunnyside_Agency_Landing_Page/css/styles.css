@@ -74,7 +74,7 @@ body {
 .section {
   width: 100vw;
   height: auto;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 .container {
   width: 100%;
@@ -181,4 +181,39 @@ body {
   text-transform: uppercase;
   background-color: var(--yellow);
   border-radius: 2.8rem;
+}
+
+/* BANNER START */
+.banner {
+  height: 100vh;
+  background-color: blue;
+}
+
+.banner .container {
+  width: 100%;
+  max-width: 76.8rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url("../assets/images/mobile/image-header.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.banner .container .title-banner {
+  width: 100%;
+  font-family: var(--second-font);
+  font-weight: var(--black-font);
+  font-size: 3.6rem;
+  color: var(--white);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10rem 0 6rem;
+  letter-spacing: 1rem;
+}
+
+.banner .container .down-arrow {
 }
