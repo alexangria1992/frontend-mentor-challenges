@@ -44,3 +44,22 @@ footer h3 {
   margin: 20px 0;
   text-transform: uppercase;
 }
+
+.home-wrapper {
+  border: 1px solid green;
+}
+
+.hero-heading {
+  font-size: 5.5rem;
+  line-height: 1;
+}
+
+.desktop-left-image {
+  bottom: -450px;
+  left: -160px;
+}
+
+.desktop-right-image {
+  top: -98px;
+  right: -949px;
+}
