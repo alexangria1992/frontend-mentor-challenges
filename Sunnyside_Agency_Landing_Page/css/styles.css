@@ -270,7 +270,7 @@ body {
 /* Mobile Banner Start */
 .banner {
   height: 100vh;
-  /* background-color: blue; */
+  background-color: var(--header-blue);
 }
 
 .banner .container {
@@ -287,6 +287,12 @@ body {
   background-position: center bottom;
 }
 
+@media screen and (min-width: 768px) {
+  .banner .container {
+    max-width: 100%;
+    background-image: url("../assets/images/desktop/image-header.jpg");
+  }
+}
 .banner .container .title-banner {
   width: 100%;
   font-family: var(--second-font);
@@ -297,6 +303,13 @@ body {
   text-transform: uppercase;
   margin: 10rem 0 6rem;
   letter-spacing: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .banner .container .title-banner {
+    font-size: 6rem;
+    margin: 14rem 0 10rem;
+  }
 }
 
 .banner .container .down-arrow {
