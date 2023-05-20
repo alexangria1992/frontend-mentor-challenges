@@ -387,3 +387,25 @@ body {
   font-size: 1.4rem;
   color: var(--grayish-blue);
 }
+
+/* Mobile Gallery Section */
+
+.gallery .container {
+  padding: 0;
+}
+
+.gallery .container .image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0;
+}
+
+/* .gallery .container .image-gallery .item-gallery {
+  background-color: red;
+} */
+
+.gallery .container .image-gallery .item-gallery picture {
+  /* background-color: blue; */
+  display: flex;
+}
