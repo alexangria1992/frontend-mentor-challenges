@@ -94,6 +94,7 @@ body {
   top: 0;
   left: 0;
   background-color: var(--header-blue);
+  z-index: 15;
 }
 
 /* HEADER > LOGO */
@@ -139,6 +140,7 @@ body {
   transform-origin: top right;
   transition: transform 0.3s ease-in-out;
   background-color: var(--white);
+  z-index: 10;
 }
 
 .header .container .main-nav.-active {
@@ -186,7 +188,7 @@ body {
 /* BANNER START */
 .banner {
   height: 100vh;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .banner .container {
@@ -216,4 +218,69 @@ body {
 }
 
 .banner .container .down-arrow {
+}
+
+/* Company Section Start */
+.company {
+  background-color: var(--white);
+}
+
+.company .container {
+  width: 100%;
+  max-width: 75rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: 0;
+  /* grid-template-rows: (2, 1fr); */
+}
+
+.company .container .card {
+}
+
+.company .container .card .card-image {
+}
+
+.company .container .card .card-content {
+  width: 100%;
+  height: auto;
+  padding: 7rem 2.4rem;
+  text-align: center;
+}
+
+.company .container .card .card-content .title,
+.company .container .card .card-content .more .link {
+  font-family: var(--second-font);
+  font-weight: var(--black-font);
+  color: var(--very-dark-desaturated-blue);
+}
+
+.company .container .card .card-content .title {
+  font-size: 3.6rem;
+  margin-bottom: 3rem;
+}
+.company .container .card .card-content .description {
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+
+.company .container .card .card-content .more::after {
+  display: block;
+  content: "";
+  width: 15rem;
+  height: 1rem;
+  background-color: var(--yellow);
+  border-radius: 0.5rem;
+  opacity: 0.2;
+  margin: -0.8rem auto 0;
+}
+
+.company .container .card .card-content .more.-variant::after {
+  background-color: var(--soft-red);
+}
+
+.company .container .card .card-content .more .link {
+  font-size: inherit;
+  background-color: transparent;
+  text-transform: uppercase;
 }
