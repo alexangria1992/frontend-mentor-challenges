@@ -69,7 +69,7 @@ body {
   margin: 0;
 }
 
-/*=== LAYOUT START ===*/
+/*=== MOBILE LAYOUT START ===*/
 
 .section {
   width: 100vw;
@@ -97,7 +97,7 @@ body {
   z-index: 15;
 }
 
-/* HEADER > LOGO */
+/* Mobile HEADER > LOGO */
 
 .header .container .logo {
   display: flex;
@@ -125,7 +125,7 @@ body {
   display: flex;
 }
 
-/* Header Nav */
+/* Mobile Header Nav */
 .header .container .main-nav {
   /* border: 1px solid blue; */
   display: block;
@@ -185,7 +185,7 @@ body {
   border-radius: 2.8rem;
 }
 
-/* BANNER START */
+/* Mobile Banner Start */
 .banner {
   height: 100vh;
   /* background-color: blue; */
@@ -220,7 +220,7 @@ body {
 .banner .container .down-arrow {
 }
 
-/* Company Section Start */
+/* Mobile Company Section Start */
 .company {
   background-color: var(--white);
 }
@@ -233,12 +233,6 @@ body {
   gap: 0;
   padding: 0;
   /* grid-template-rows: (2, 1fr); */
-}
-
-.company .container .card {
-}
-
-.company .container .card .card-image {
 }
 
 .company .container .card .card-content {
@@ -285,11 +279,7 @@ body {
   text-transform: uppercase;
 }
 
-/* Services Section Start */
-
-.services {
-  /* background-color: greenyellow; */
-}
+/* Mobile Services Section Start */
 
 .services .container {
   display: grid;
@@ -335,4 +325,65 @@ body {
 }
 
 .services .container .card.-variant {
+}
+
+/* Mobile Testimonials Section */
+
+.testimonials {
+  background-color: var(--white);
+}
+
+.testimonials .container {
+  flex-direction: column;
+  padding: 7rem 2.4rem;
+}
+
+.testimonials .container .section-title {
+  width: 100%;
+  font-family: var(--second-font);
+  font-weight: var(--bold-font);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+/* .testimonials .container .cards-wrap {
+
+} */
+
+.testimonials .container .cards-wrap .card {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3.5rem 0;
+}
+
+.testimonials .container .cards-wrap .card .photo {
+  display: block;
+  width: 7.2rem;
+  height: 7.2rem;
+  border-radius: 3.6rem;
+  overflow: hidden;
+  margin-bottom: 3.6rem;
+}
+
+.testimonials .container .cards-wrap .card .testimonial {
+  line-height: 1.6;
+  margin-bottom: 3.6rem;
+  text-align: center;
+}
+
+.testimonials .container .cards-wrap .card .name {
+  font-family: var(--second-font);
+  font-weight: var(--black-font);
+  margin-bottom: 1rem;
+}
+
+.testimonials .container .cards-wrap .position {
+  font-size: 1.4rem;
+  color: var(--grayish-blue);
 }
