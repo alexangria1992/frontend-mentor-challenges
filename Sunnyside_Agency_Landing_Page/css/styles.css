@@ -264,6 +264,14 @@ body {
 @media screen and (min-width: 992px) {
   .header .container .main-nav .list .item .link.-cta-button {
     background-color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .header .container .main-nav .list .item .link.-cta-button:hover {
+    background-color: var(--header-blue-hover);
+    cursor: pointer;
+    color: var(--white);
   }
 }
 
@@ -312,7 +320,17 @@ body {
   }
 }
 
+@keyframes updown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10%);
+  }
+}
+
 .banner .container .down-arrow {
+  animation: updown 0.3s infinite alternate;
 }
 
 /* Mobile Company Section Start */
@@ -413,11 +431,16 @@ body {
   border-radius: 0.5rem;
   opacity: 0.2;
   margin: -0.8rem auto 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 992px) {
   .company .container .card .card-content .more::after {
     margin: -0.8rem auto 0 0;
+  }
+  .company .container .card .card-content .more:hover::after {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
   }
 }
 
@@ -614,6 +637,13 @@ body {
   gap: 0;
 }
 
+@media screen and (min-width: 752px) {
+  .gallery .container .image-gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
 /* .gallery .container .image-gallery .item-gallery {
   background-color: red;
 } */
@@ -660,6 +690,14 @@ body {
 
 .footer .container .footer-nav .list .item .link {
   color: var(--dark-moderate-cyan);
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 992px) {
+  .footer > .container > .footer-nav > .list > .item:hover > .link {
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 .footer .container .social-media {
@@ -667,4 +705,15 @@ body {
   max-width: 16.4rem;
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (min-width: 992px) {
+  .footer > .container > .social-media > .icon > .link > svg path {
+    fill: var(--dark-moderate-cyan);
+    transition: all 0.3s ease-in-out;
+  }
+  .footer > .container > .social-media > .icon > .link:hover > svg path {
+    fill: var(--white);
+    transition: all 0.3s ease-in-out;
+  }
 }
