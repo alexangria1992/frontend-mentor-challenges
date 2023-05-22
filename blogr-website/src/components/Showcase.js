@@ -3,7 +3,7 @@ import React from "react";
 const Showcase = () => {
   return (
     <>
-      <section className="showcase relative ">
+      <section className="showcase  ">
         <div className="overlay border-2 border-green-400 px-5 items-center flex flex-col  justify-center text-center">
           <h1 className="font-bold mb-5 text-4xl text-white md:text-5xl xl:text-6xl 2xl:text-7xl">
             A modern publishing platform
