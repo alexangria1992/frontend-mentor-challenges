@@ -1,19 +1,32 @@
-import { v4 as uuidv4 } from "uuid";
+import React, { useState } from "react";
+import { footer } from "../data/footer";
+import logo from "../images/logo.svg";
 
-export const footer = [
-  {
-    id: uuidv4(),
-    title: "Product",
-    links: ["Overview", "Pricing", "Marketplace", "Features", "Integrations"],
-  },
-  {
-    id: uuidv4(),
-    title: "Company",
-    links: ["About", "Team", "Blog", "Careers"],
-  },
-  {
-    id: uuidv4(),
-    title: "Connect",
-    links: ["Contact", "Newsletter", "LinkedIn"],
-  },
-];
+const Footer = () => {
+  const [footerLinks, setFooterLinks] = useState(footer);
+
+  return (
+    <>
+      <footer className="footer text-center pb-2  ">
+        <div>
+          <img src={logo} alt="" className="block mx-auto pt-10  " />
+        </div>
+
+        <div>
+          {footerLinks.map(({ id, title, links }) => (
+            <ul key={id}>
+              <h4 className="mt-10 text-lg py-3  ">{title}</h4>
+              {links.map((link) => (
+                <li key={link} className="my-1">
+                  {link}
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
+      </footer>
+    </>
+  );
+};
+
+export default Footer;
