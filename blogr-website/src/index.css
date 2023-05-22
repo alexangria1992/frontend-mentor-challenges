@@ -122,6 +122,8 @@ body {
 .state .state-img {
   position: absolute;
   top: -20%;
+  height: 500px;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -143,6 +145,10 @@ body {
   .navbar ul li {
     color: var(--white);
     margin: 0;
+  }
+
+  .state .state-img {
+    width: 500px;
   }
 }
 
