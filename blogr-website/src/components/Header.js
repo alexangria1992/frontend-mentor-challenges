@@ -17,8 +17,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="absolute p-5 flex items-center justify-between w-full">
-        <div>
+      <header className="absolute  p-5 flex items-center justify-between w-full md:flex">
+        <div className="md:mr-5">
           <img src={logo} alt="" />
         </div>
         {/* Links */}

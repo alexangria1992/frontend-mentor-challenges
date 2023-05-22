@@ -131,11 +131,13 @@ body {
     position: relative;
     background-color: transparent;
     box-shadow: none;
-    width: auto;
     padding: 0;
     left: 0;
+    margin: 0;
     transform: translateX(0%);
+    width: 100%;
     top: 0;
+    /* display: flex !important; */
   }
 
   .navbar ul {
@@ -144,7 +146,7 @@ body {
 
   .navbar ul li {
     color: var(--white);
-    margin: 0;
+    margin: 0 20px;
   }
 
   .state .state-img {
