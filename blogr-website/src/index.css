@@ -61,3 +61,22 @@ body {
   font-family: "Overpass", sans-serif;
   overflow-x: hidden;
 }
+
+/* Showcase */
+.showcase {
+  height: 400px;
+  background-image: var(--background-gradient);
+  border-bottom-left-radius: 100px;
+}
+
+.showcase .overlay {
+  min-height: 400px;
+  background: url("./images/bg-pattern-intro.svg") no-repeat center/cover;
+}
+
+@media (min-width: 1024px) {
+  .showcase,
+  .showcase .overlay {
+    height: 600px;
+  }
+}
