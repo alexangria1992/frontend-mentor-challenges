@@ -5,7 +5,7 @@ import React from "react";
 const Menu = ({ isOpen, setIsOpen }) => {
   return (
     <>
-      <button onClick={() => setIsOpen(!isOpen)}>
+      <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
         {isOpen ? <img src={close} alt="" /> : <img src={open} alt="" />}
       </button>
     </>

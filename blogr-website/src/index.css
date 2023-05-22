@@ -110,7 +110,21 @@ body {
   color: var(--white);
 }
 
-/* @media (min-width: 768px) {
+/* State */
+
+.state {
+  /* background-color: hsl(237, 23%, 32%); */
+  background-image: var(--state);
+  border-radius: 0 100px 0 100px;
+  margin: 100px 0 50px;
+}
+
+.state .state-img {
+  position: absolute;
+  top: -20%;
+}
+
+@media (min-width: 768px) {
   .navbar {
     position: relative;
     background-color: transparent;
@@ -130,7 +144,7 @@ body {
     color: var(--white);
     margin: 0;
   }
-} */
+}
 
 @media (min-width: 1024px) {
   .showcase,

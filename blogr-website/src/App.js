@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Free from "./components/Free";
 import Header from "./components/Header";
 import Showcase from "./components/Showcase";
+import State from "./components/State";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Header />
       <Showcase />
       <Designed />
+      <State />
       <Free />
       <Footer />
     </>
