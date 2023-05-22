@@ -99,9 +99,49 @@ body {
   background: url("./images/bg-pattern-intro.svg") no-repeat center/cover;
 }
 
+/* Footer */
+.footer {
+  background-color: var(--very-dark-black-blue);
+  color: var(--grayish-blue);
+  border-top-right-radius: 100px;
+}
+
+.footer h4 {
+  color: var(--white);
+}
+
+/* @media (min-width: 768px) {
+  .navbar {
+    position: relative;
+    background-color: transparent;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+    left: 0;
+    transform: translateX(0%);
+    top: 0;
+  }
+
+  .navbar ul {
+    flex-direction: row;
+  }
+
+  .navbar ul li {
+    color: var(--white);
+    margin: 0;
+  }
+} */
+
 @media (min-width: 1024px) {
   .showcase,
   .showcase .overlay {
     height: 600px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-links {
+    /* border: 1px solid red; */
+    transform: translateX(-60%);
   }
 }
