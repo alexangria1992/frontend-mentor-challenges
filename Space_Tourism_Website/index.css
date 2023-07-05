@@ -118,3 +118,23 @@ select {
 .text-white {
   color: hsl(var(--clr-white));
 }
+.wrapper {
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.first-box {
+  width: 21.875rem;
+  height: 7.25rem;
+}
+
+.second-box {
+  width: 21.875rem;
+  height: 7.25rem;
+}
+
+.third-box {
+  width: 21.875rem;
+  height: 7.25rem;
+}
