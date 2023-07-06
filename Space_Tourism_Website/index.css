@@ -223,6 +223,19 @@ select {
   color: hsl(var(--clr-light) / 0.25);
 }
 
+/* ------------------------*/
+/* COMPONENTS */
+/* ------------------------*/
+
+.large-button {
+  padding: 0 2em;
+  display: grid;
+  aspect-ratio: 1;
+  place-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
 .wrapper {
   justify-content: center;
   align-items: center;
