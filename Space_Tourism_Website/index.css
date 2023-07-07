@@ -8,12 +8,12 @@
   --clr-white: 0 0% 100%;
 
   /* font-sizes */
-  --fs-900: 9.375rem;
-  --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-600: 2rem;
-  --fs-500: 1.75rem;
-  --fs-400: 1.125rem;
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1rem;
+  --fs-500: 1rem;
+  --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
 
@@ -21,6 +21,27 @@
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
+}
+
+@media (min-width: 35em) {
+  :root {
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+  }
+}
+
+@media (min-width: 45em) {
+  :root {
+    /* font-sizes */
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+  }
 }
 
 /* ------------------------*/
@@ -122,22 +143,17 @@ select {
 
 .grid-container {
   display: grid;
-  grid-template-columns: minxmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
-      2rem,
-      1fr
-    );
+
   border: 1px solid green;
-  column-gap: var(--container-gap, 2rem);
 }
 
-@media (min-width: 720px) {
+@media (min-width: 45em) {
   .grid-container {
-    grid-template-columns: minxmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
         2rem,
         1fr
       );
-    border: 1px solid pink;
-    column-gap: var(--container-gap, 2rem);
   }
 
   .grid-container > *:first-child {
@@ -260,7 +276,6 @@ select {
 /* COMPONENTS */
 /* ------------------------*/
 .large-button {
-  font-size: 2rem;
   position: relative;
   z-index: 1;
   display: inline-grid;
