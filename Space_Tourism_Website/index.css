@@ -1,8 +1,9 @@
-/* ------------------------*/
-/* CUSTOM PROPERTIES */
-/* ------------------------*/
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
 
 :root {
+  /* colors */
   --clr-dark: 230 35% 7%;
   --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
@@ -12,12 +13,12 @@
   --fs-800: 3.5rem;
   --fs-700: 1.5rem;
   --fs-600: 1rem;
-  --fs-500: 1rem;
+  --fs-500: 1.75rem;
   --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
 
-  /* font-family */
+  /* font-families */
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
@@ -28,7 +29,6 @@
     --fs-800: 5rem;
     --fs-700: 2.5rem;
     --fs-600: 1.5rem;
-    --fs-500: 1.25rem;
     --fs-400: 1rem;
   }
 }
@@ -39,14 +39,15 @@
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
     --fs-600: 2rem;
-    --fs-500: 1.75rem;
     --fs-400: 1.125rem;
   }
 }
 
-/* ------------------------*/
-/* RESET */
-/* ------------------------*/
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
 
 /* Box sizing */
 *,
@@ -55,6 +56,7 @@
   box-sizing: border-box;
 }
 
+/* Reset margins */
 body,
 h1,
 h2,
@@ -77,26 +79,27 @@ p {
   font-weight: 400;
 }
 
-/*  SETUP BODY */
+/* set up the body */
 body {
-  line-height: 1.4;
-  min-height: 100vh;
   font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
-  color: hsl(var(--clr-light));
+  color: hsl(var(--clr-white));
   background-color: hsl(var(--clr-dark));
+  line-height: 1.5;
+  min-height: 100vh;
+
   display: grid;
   grid-template-rows: min-content 1fr;
 }
 
 /* make images easier to work with */
 img,
-picture {
+picutre {
   max-width: 100%;
   display: block;
 }
 
-/* make forms easier to work with */
+/* make form elements easier to work with */
 input,
 button,
 textarea,
@@ -104,8 +107,7 @@ select {
   font: inherit;
 }
 
-/* remove animations for people whove turned them off*/
-
+/* remove animations for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -117,9 +119,11 @@ select {
   }
 }
 
-/* ------------------------*/
-/* UTILITY CLASSES */
-/* ------------------------*/
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
 
 .flex {
   display: flex;
@@ -130,21 +134,24 @@ select {
   display: grid;
   gap: var(--gap, 1rem);
 }
+
+.d-block {
+  display: block;
+}
+
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
-  outline: 1px solid red;
 }
 
 .container {
   padding-inline: 2em;
-  min-width: 60rem;
   margin-inline: auto;
+  max-width: 80rem;
 }
 
 .grid-container {
+  border: 5px solid limegreen;
   display: grid;
-
-  border: 1px solid green;
 }
 
 @media (min-width: 45em) {
@@ -175,11 +182,11 @@ select {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
+  white-space: nowrap; /* added line */
   border: 0;
 }
 
-/* COLORS */
+/* colors */
 
 .bg-dark {
   background-color: hsl(var(--clr-dark));
@@ -269,12 +276,13 @@ select {
 .numbered-title span {
   margin-right: 0.5em;
   font-weight: 700;
-  color: hsl(var(--clr-light) / 0.25);
+  color: hsl(var(--clr-white) / 0.25);
 }
 
-/* ------------------------*/
-/* COMPONENTS */
-/* ------------------------*/
+/* ------------------- */
+/* Compontents         */
+/* ------------------- */
+
 .large-button {
   position: relative;
   z-index: 1;
@@ -295,7 +303,7 @@ select {
   background: hsl(var(--clr-white) / 0.1);
   border-radius: 50%;
   opacity: 0;
-  transition: opacity 500ms linear, transform 750ms ease-in;
+  transition: opacity 500ms linear, transform 750ms ease-in-out;
 }
 
 .large-button:hover::after,
@@ -316,19 +324,16 @@ select {
   text-decoration: none;
 }
 
-.primary-navigation a span {
+.primary-navigation a > span {
   font-weight: 700;
   margin-right: 0.5em;
 }
 
 .underline-indicators > * {
-  border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
-  padding: var(--underline-gap, 1rem) 0;
-  /* border: 0; */
   cursor: pointer;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
+  padding: var(--underline-gap, 1rem) 0;
+  border: 0;
+  border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
 }
 
 .underline-indicators > *:hover,
@@ -348,14 +353,10 @@ select {
 
 .dot-indicators > * {
   cursor: pointer;
+  border: 0;
   border-radius: 50%;
-  aspect-ratio: 1;
-  /* border: 0; */
-  /* border-top: 0;
-  border-right: 0;
-  border-left: 0; */
-  padding: 0.25em;
-  background-color: hsl(var(--clr-white)) / 0.25;
+  padding: 0.5em;
+  background-color: hsl(var(--clr-white) / 0.25);
 }
 
 .dot-indicators > *:hover,
@@ -366,6 +367,7 @@ select {
 .dot-indicators > [aria-selected="true"] {
   background-color: hsl(var(--clr-white) / 1);
 }
+
 .wrapper {
   justify-content: center;
   align-items: center;
