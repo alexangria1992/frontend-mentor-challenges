@@ -64,6 +64,8 @@ body {
   font-size: var(--fs-400);
   color: hsl(var(--clr-light));
   background-color: hsl(var(--clr-dark));
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 /* make images easier to work with */
@@ -128,15 +130,27 @@ select {
   column-gap: var(--container-gap, 2rem);
 }
 
-.grid-container > *:first-child {
-  grid-column: 2;
-  outline: 1px solid red;
+@media (min-width: 720px) {
+  .grid-container {
+    grid-template-columns: minxmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+        2rem,
+        1fr
+      );
+    border: 1px solid pink;
+    column-gap: var(--container-gap, 2rem);
+  }
+
+  .grid-container > *:first-child {
+    grid-column: 2;
+    outline: 1px solid red;
+  }
+
+  .grid-container > *:last-child {
+    grid-column: 3;
+    outline: 1px solid yellow;
+  }
 }
 
-.grid-container > *:last-child {
-  grid-column: 3;
-  outline: 1px solid yellow;
-}
 .sr-only {
   position: absolute;
   width: 1px;
