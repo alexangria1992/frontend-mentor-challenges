@@ -118,6 +118,25 @@ select {
   margin-inline: auto;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: minxmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+      2rem,
+      1fr
+    );
+  border: 1px solid green;
+  column-gap: var(--container-gap, 2rem);
+}
+
+.grid-container > *:first-child {
+  grid-column: 2;
+  outline: 1px solid red;
+}
+
+.grid-container > *:last-child {
+  grid-column: 3;
+  outline: 1px solid yellow;
+}
 .sr-only {
   position: absolute;
   width: 1px;
