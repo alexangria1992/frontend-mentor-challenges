@@ -330,8 +330,15 @@ select {
   list-style: none;
   padding: 0;
   margin: 0;
-  background: hsl(var(--clr-white) / 0.02);
-  backdrop-filter: blur(1.5rem);
+  background: hsl(var(--clr-dark) / 0.95);
+  /* backdrop-filter: blur(1.5rem); */
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-navigation {
+    background: hsl(var(--clr-white) / 0.05);
+    backdrop-filter: blur(1.5rem);
+  }
 }
 
 @media (max-width: 35rem) {
@@ -340,7 +347,7 @@ select {
     list-style: none;
     position: fixed;
     z-index: 1000;
-    background: hsl(var(--clr-white) / 0.1);
+    background: hsl(var(--clr-dark) / 0.95);
     inset: 0 0 0 20%;
     padding: min(20rem, 15vh) 2rem;
     margin: 0;
