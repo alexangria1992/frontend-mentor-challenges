@@ -198,6 +198,21 @@ select {
   border: 0;
 }
 
+.skip-to-content {
+  background-color: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark)) !important;
+  padding: 0.5em 1em;
+  margin-inline: auto;
+  position: absolute;
+  z-index: 9999;
+  transform: translateY(-100%);
+  transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
 /* colors */
 
 .bg-dark {
@@ -328,7 +343,7 @@ select {
 /* Primary Header */
 
 .logo {
-  margin: 1.5 clamp(1.5rem, 5vw, 3.5rem);
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
 }
 
 .primary-header {
