@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google fonts -->
@@ -10,8 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
     <link rel="stylesheet" href="index.css" />
+
+    <title>Document</title>
+    <script src="index.js" defer></script>
   </head>
   <body class="home">
     <header class="primary-header flex">
@@ -25,6 +32,7 @@
         <ul
           id="primary-navigation"
           class="primary-navigation underline-indicators flex"
+          data-visible="false"
         >
           <li class="active">
             <a
