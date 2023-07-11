@@ -562,6 +562,19 @@ select {
   padding-top: 2.5rem;
   margin-top: 2.5rem;
 }
+
+@media (min-width: 35em) {
+  .numbered-title {
+    justify-self: start;
+    margin-top: 2rem;
+  }
+
+  .destination-meta {
+    /* border: 1px solid green; */
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
 @media (min-width: 45em) {
   .grid-container {
     column-gap: var(--container-gap, 2rem);
