@@ -523,8 +523,9 @@ select {
   padding-bottom: 4rem;
 }
 
-.grid-container * {
-  max-width: 45ch;
+.grid-container p:not([class]) {
+  max-width: 50ch;
+  /* outline: 3px solid limegreen; */
 }
 
 .numbered-title {
@@ -617,7 +618,7 @@ select {
   }
 
   .destination-meta {
-    --gap: 6rem;
+    --gap: min(8vw, 6rem);
     justify-content: start;
   }
 }
