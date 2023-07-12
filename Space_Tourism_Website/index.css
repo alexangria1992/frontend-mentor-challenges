@@ -567,7 +567,41 @@ select {
 .destination-meta p {
   font-size: 1.75rem;
 }
+
+/* Crew Layout */
+
+.grid-container--crew {
+  --flow-space: 2rem;
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+}
+
+.grid-container--crew img {
+  grid-area: image;
+  max-width: 60%;
+  border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
+}
+
+.grid-container--crew .dot-indicators {
+  grid-area: tabs;
+}
+
+.grid-container--crew .crew-details {
+  grid-area: content;
+}
+
 @media (min-width: 35em) {
+  .grid-container--crew {
+    --flow-space: 2rem;
+    grid-template-areas:
+      "title"
+      "content"
+      "tabs"
+      "image";
+  }
   .numbered-title {
     justify-self: start;
     margin-top: 2rem;
@@ -613,7 +647,8 @@ select {
       ". image content .";
   }
 
-  .grid-container--destination img {
+  .grid-container--destination img,
+  .grid-container--crew img {
     max-width: 90%;
   }
 
@@ -621,4 +656,21 @@ select {
     --gap: min(8vw, 6rem);
     justify-content: start;
   }
+
+  .grid-container--crew {
+    padding-bottom: 0;
+    grid-template-areas:
+      ". title title ."
+      ". content image ."
+      ". tabs image .";
+  }
+
+  .grid-container--crew .dot-indicators {
+    justify-self: start;
+    /* border: 1px solid red; */
+  }
+
+  /* .grid-container--crew img {
+    align-self: end;
+  } */
 }
