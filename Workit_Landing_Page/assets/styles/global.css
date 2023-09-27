@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Frances;
+  src: url("../fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url("../fonts/manrope/Manrope-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #24053e;
+  --secondary: #44ffa1;
+  --grey: #584d62;
+  --ghost: #fcf8ff;
+  --light: #fff;
+}
+
+body {
+  font-family: Manrope, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
