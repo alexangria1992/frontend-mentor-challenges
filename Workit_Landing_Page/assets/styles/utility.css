@@ -1,6 +1,12 @@
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 .heading-l {
   font-family: Fraunces, serif;
   font-size: 50px;
+  font-weight: 600;
 }
 
 .heading-m {
@@ -14,7 +20,7 @@
 }
 
 body {
-  font-family: Manrope, serif;
+  font-family: Fraunces, serif;
 }
 
 .btn-primary {
@@ -41,6 +47,8 @@ body {
   border-bottom: solid 3px var(--secondary);
   font-weight: 700;
   font-size: 16px;
+  cursor: pointer;
+  transition: linear 0.2s;
 }
 
 .btn-secondary:hover {

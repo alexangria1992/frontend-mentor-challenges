@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Frances;
+  font-family: Fraunces;
   src: url("../fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
 }
 
@@ -26,4 +26,9 @@ body {
   font-family: Manrope, sans-serif;
   font-size: 16px;
   font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
